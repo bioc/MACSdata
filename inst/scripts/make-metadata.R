@@ -10,9 +10,17 @@ cbase <- rep(FALSE, length(fs))
 cbase[type == "BAM"] <- TRUE
 
 meta_data <- data.frame(
-    Title = rep("MACS test datasets", 9),
-    Description = sub(".bed.gz|.bedpe.gz|.bam", "", fs),
-    BiocVersion = "3.12",
+    Title = fs,
+    Description = c("CTCF single end bed file",
+                    "CTCF pair end bam file",
+                    "CTCF pair end bed file",
+                    "simulated contigs 50k bed file",
+                    "CTCF 12878 bed file",
+                    "CTCF single end control bed file",
+                    "CTCF pair end control bam file",
+                    "CTCF pair end control bed file",
+                    "CTCF 12878 control bed file"),
+    BiocVersion = "3.13",
     Genome = "GRCh37",
     SourceType= type,
     SourceUrl = "https://github.com/macs3-project/MACS/tree/master/test",
@@ -27,6 +35,6 @@ meta_data <- data.frame(
     RDataPath = file.path("MACSdata", fs),
     stringsAsFactors = FALSE
 )
-meta_data[meta_data$Description == "contigs50k", c("Genome", "Species", "TaxonomyId")] <- NA
+meta_data[meta_data$Title == "contigs50k.bed.gz", c("Genome", "Species", "TaxonomyId")] <- NA
 
 write.csv(meta_data, file = "metadata.csv", row.names = FALSE)
