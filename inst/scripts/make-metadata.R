@@ -1,9 +1,9 @@
 
-
 testcmd <- readLines("https://raw.githubusercontent.com/macs3-project/MACS/master/test/cmdlinetest")
 f1 <- sub(".*=", "", grep("^CHIP", testcmd, value = TRUE))
 f2 <- sub(".*=", "", grep("^CTRL", testcmd, value = TRUE))
 fs <- c(f1, f2)
+fs[fs == "input_12878_5M.bed.gz"] <- "Input_12878_5M.bed.gz"
 type <- rep("BED", length(fs))
 type[grep(".bam", fs)] <- "BAM"
 cbase <- rep(FALSE, length(fs))
