@@ -1,0 +1,15 @@
+Package: MACSdata
+Title: Test datasets for the MACSr package.
+Version: 0.99.0
+Authors@R: 
+    person(given = "Qiang",
+           family = "Hu",
+           role = c("aut", "cre"),
+           email = "Qiang.Hu@roswellpark.org",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Test datasets from the MACS3 test examples.
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
