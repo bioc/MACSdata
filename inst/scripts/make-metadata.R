@@ -13,7 +13,7 @@ meta_data <- data.frame(
     Title = rep("MACS test datasets", 9),
     Description = sub(".bed.gz|.bedpe.gz|.bam", "", fs),
     BiocVersion = "3.12",
-    Genome = NA,
+    Genome = "GRCh37",
     SourceType= type,
     SourceUrl = "https://github.com/macs3-project/MACS/tree/master/test",
     SourceVersion = "v1",
@@ -27,5 +27,6 @@ meta_data <- data.frame(
     RDataPath = file.path("MACSdata", fs),
     stringsAsFactors = FALSE
 )
+meta_data[meta_data$Description == "contigs50k", c("Genome", "Species", "TaxonomyId")] <- NA
 
 write.csv(meta_data, file = "metadata.csv", row.names = FALSE)
