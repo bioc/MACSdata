@@ -25,7 +25,7 @@ meta_data <- data.frame(
     SourceType= type,
     SourceUrl = "https://github.com/macs3-project/MACS/tree/master/test",
     SourceVersion = "v1",
-    Species = "Home sapiens",
+    Species = "Homo sapiens",
     TaxonomyId="9606",
     Coordinate_1_based = cbase,
     DataProvider = "MACS",
