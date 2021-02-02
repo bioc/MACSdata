@@ -4,6 +4,10 @@ f1 <- sub(".*=", "", grep("^CHIP", testcmd, value = TRUE))
 f2 <- sub(".*=", "", grep("^CTRL", testcmd, value = TRUE))
 fs <- c(f1, f2)
 fs[fs == "input_12878_5M.bed.gz"] <- "Input_12878_5M.bed.gz"
+fs <- c(fs, c("PEsample_peaks_sorted.bed",
+              "PEsample_peaks_sorted.bam",
+              "PEcontrol_peaks_sorted.bam"))
+
 type <- rep("BED", length(fs))
 type[grep(".bam", fs)] <- "BAM"
 cbase <- rep(FALSE, length(fs))

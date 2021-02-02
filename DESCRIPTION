@@ -1,13 +1,13 @@
 Package: MACSdata
-Title: Test datasets for the MACSr package.
-Version: 0.99.0
+Title: Test datasets for the MACSr package
+Version: 0.99.1
 Authors@R: 
     person(given = "Qiang",
            family = "Hu",
            role = c("aut", "cre"),
            email = "Qiang.Hu@roswellpark.org",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Test datasets from the MACS3 test examples.
+Description: Test datasets from the MACS3 test examples are use in the examples of the `MACSr` package. All 9 datasets are uploaded to the `ExperimentHub`. The original data can be found at: https://github.com/macs3-project/MACS/.
 License: file LICENSE
 Encoding: UTF-8
 LazyData: true
