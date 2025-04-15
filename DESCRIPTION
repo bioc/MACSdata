@@ -1,6 +1,6 @@
 Package: MACSdata
 Title: Test datasets for the MACSr package
-Version: 1.16.0
+Version: 1.17.0
 Authors@R: 
     person(given = "Qiang",
            family = "Hu",
